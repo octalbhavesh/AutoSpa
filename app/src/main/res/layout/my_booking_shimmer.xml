@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:shimmer="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmerFrameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone"
+            shimmer:duration="800">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_10sdp">
+
+                        <ImageView
+                            android:id="@+id/img_car"
+                            android:layout_width="@dimen/_90sdp"
+                            android:layout_height="@dimen/_60sdp"
+                            android:background="@color/lightgraycolor"
+                            android:scaleType="centerCrop" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="@dimen/_3sdp"
+                            android:layout_toEndOf="@+id/img_car"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center|start"
+                                android:orientation="horizontal">
+
+                                <View
+                                    android:id="@+id/txt_carname"
+                                    android:layout_width="@dimen/_100sdp"
+                                    android:layout_height="@dimen/_20sdp"
+                                    android:background="@color/lightgraycolor"
+                                    android:ellipsize="marquee"
+                                    android:singleLine="true" />
+
+                            </LinearLayout>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_15sdp"
+                                android:layout_marginTop="@dimen/_3sdp"
+                                android:gravity="center|start">
+
+                                <View
+                                    android:id="@+id/txt_username"
+                                    android:layout_width="@dimen/_80sdp"
+                                    android:layout_height="@dimen/_15sdp"
+                                    android:layout_alignParentStart="true"
+                                    android:background="@color/lightgraycolor" />
+
+                                <View
+                                    android:id="@+id/txt_price"
+                                    android:layout_width="@dimen/_30sdp"
+                                    android:layout_height="@dimen/_15sdp"
+                                    android:layout_alignParentEnd="true"
+                                    android:background="@color/lightgraycolor" />
+
+                            </RelativeLayout>
+
+                            <View
+                                android:id="@+id/txt_time"
+                                android:layout_width="@dimen/_120sdp"
+                                android:layout_height="@dimen/_15sdp"
+                                android:layout_marginTop="@dimen/_3sdp"
+                                android:background="@color/lightgraycolor" />
+
+                            <com.poshwash.driver.views.customViews.CustomTextViewRegular
+                                android:id="@+id/status_tv"
+                                android:layout_width="@dimen/_120sdp"
+                                android:layout_height="@dimen/_15sdp"
+                                android:layout_marginTop="@dimen/_3sdp"
+                                android:background="@color/lightgraycolor" />
+
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_10sdp">
+
+                        <ImageView
+                            android:id="@+id/img_car1"
+                            android:layout_width="@dimen/_90sdp"
+                            android:layout_height="@dimen/_60sdp"
+                            android:background="@color/lightgraycolor"
+                            android:scaleType="centerCrop" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="@dimen/_3sdp"
+                            android:layout_toEndOf="@+id/img_car1"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center|start"
+                                android:orientation="horizontal">
+
+                                <View
+                                    android:id="@+id/txt_carname1"
+                                    android:layout_width="@dimen/_100sdp"
+                                    android:layout_height="@dimen/_20sdp"
+                                    android:background="@color/lightgraycolor"
+                                    android:ellipsize="marquee"
+                                    android:singleLine="true" />
+
+                            </LinearLayout>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_15sdp"
+                                android:layout_marginTop="@dimen/_3sdp"
+                                android:gravity="center|start">
+
+                                <View
+                                    android:id="@+id/txt_username1"
+                                    android:layout_width="@dimen/_80sdp"
+                                    android:layout_height="@dimen/_15sdp"
+                                    android:layout_alignParentStart="true"
+                                    android:background="@color/lightgraycolor" />
+
+                                <View
+                                    android:id="@+id/txt_price1"
+                                    android:layout_width="@dimen/_30sdp"
+                                    android:layout_height="@dimen/_15sdp"
+                                    android:layout_alignParentEnd="true"
+                                    android:background="@color/lightgraycolor" />
+
+                            </RelativeLayout>
+
+                            <View
+                                android:id="@+id/txt_time1"
+                                android:layout_width="@dimen/_120sdp"
+                                android:layout_height="@dimen/_15sdp"
+                                android:layout_marginTop="@dimen/_3sdp"
+                                android:background="@color/lightgraycolor" />
+
+                            <com.poshwash.driver.views.customViews.CustomTextViewRegular
+                                android:id="@+id/status_tv1"
+                                android:layout_width="@dimen/_120sdp"
+                                android:layout_height="@dimen/_15sdp"
+                                android:layout_marginTop="@dimen/_3sdp"
+                                android:background="@color/lightgraycolor" />
+
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+        </com.facebook.shimmer.ShimmerFrameLayout>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layoutDirection="rtl"
+        android:orientation="vertical"
+        android:textDirection="rtl">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_10sdp">
+
+            <ImageView
+                android:id="@+id/img_car"
+                android:layout_width="@dimen/_90sdp"
+                android:layout_height="@dimen/_60sdp"
+                android:background="@drawable/recentgleimageview"
+                android:scaleType="centerCrop" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_3sdp"
+                android:layout_toEndOf="@+id/img_car"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|start"
+                    android:orientation="horizontal">
+
+                    <com.poshwash.driver.views.customViews.CustomTextViewBold
+                        android:id="@+id/txt_carname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="marquee"
+                        android:singleLine="true"
+                        android:textColor="@color/signup_btn"
+                        android:textSize="@dimen/_15sdp"
+                        android:textStyle="bold" />
+
+                    <com.poshwash.driver.views.customViews.CustomTextViewRegular
+                        android:id="@+id/membership_type_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:text=""
+                        android:textColor="@color/graycolor"
+                        android:textSize="@dimen/_12sdp" />
+
+                </LinearLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:gravity="center|start">
+
+                    <com.poshwash.driver.views.customViews.CustomTextViewRegular
+                        android:id="@+id/txt_username"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_gravity="center_vertical"
+                        android:layout_toStartOf="@+id/rating_bar"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:textSize="@dimen/_11sdp" />
+
+                    <me.zhanghai.android.materialratingbar.MaterialRatingBar
+                        android:id="@+id/rating_bar"
+                        style="@style/Widget.MaterialRatingBar.RatingBar"
+                        android:layout_width="@dimen/_55sdp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_3sdp"
+                        android:layout_toStartOf="@+id/txt_price"
+                        android:isIndicator="true"
+                        android:maxHeight="48dp"
+                        android:minHeight="15dp"
+                        android:numStars="5"
+                        app:mrb_progressTint="@color/ratingbar"
+                        app:mrb_secondaryProgressTint="@color/ratingbar" />
+
+
+                    <com.poshwash.driver.views.customViews.CustomTextViewBold
+                        android:id="@+id/txt_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_gravity="end"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:gravity="end"
+                        android:textColor="@color/colorskyblue"
+                        android:textSize="@dimen/_11sdp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+                <com.poshwash.driver.views.customViews.CustomTextViewRegular
+                    android:id="@+id/txt_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_3sdp" />
+
+                <com.poshwash.driver.views.customViews.CustomTextViewRegular
+                    android:id="@+id/status_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:gravity="start"
+                    android:text="sadf"
+                    android:textColor="@color/colorskyblue"
+                    android:visibility="gone" />
+
+                <com.poshwash.driver.views.customViews.CustomTextViewRegular
+                    android:id="@+id/getfare_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:gravity="end"
+                    android:text="@string/get_fare"
+                    android:textColor="@color/skybluecolor"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/lightdarkgraycolor" />
+
+    </LinearLayout>
+</layout>

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:layoutDirection="rtl"
+        android:orientation="vertical"
+        android:textDirection="rtl">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:background="@color/white">
+
+                <ImageView
+                    android:id="@+id/back_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="?actionBarSize"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    android:rotation="180"
+                    android:src="@drawable/back"
+                    android:tint="@color/colorskyblue" />
+
+                <com.poshwash.driver.views.customViews.CustomTextViewBold
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="20dp"
+                    android:text="@string/get_fare"
+                    android:textColor="@color/graycolor"
+                    android:textSize="@dimen/_15sdp" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/card_view">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recylerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_5sdp" />
+
+                <LinearLayout
+                    android:id="@+id/total_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/recylerview"
+                    android:background="@color/colorskyblue"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <com.poshwash.driver.views.customViews.CustomTextViewBold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/total_amt"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_15sdp"
+                        android:visibility="visible" />
+
+                    <com.poshwash.driver.views.customViews.CustomTextViewBold
+                        android:id="@+id/total_amount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_15sdp"
+                        android:visibility="visible"
+                        tools:text="" />
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/promoRecylerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/total_ll"
+                    android:layout_marginBottom="@dimen/_5sdp" />
+
+                <com.balysv.materialripple.MaterialRippleLayout
+                    android:id="@+id/ripple"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/promoRecylerview"
+                    android:layout_alignParentStart="true"
+                    app:mrl_rippleAlpha="0.1"
+                    app:mrl_rippleColor="@color/white"
+                    app:mrl_rippleDelayClick="true"
+                    app:mrl_rippleDimension="10dp"
+                    app:mrl_rippleDuration="350"
+                    app:mrl_rippleHover="true"
+                    app:mrl_rippleOverlay="true"
+                    app:mrl_ripplePersistent="true">
+
+                    <LinearLayout
+                        android:id="@+id/bottom_ll"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorskyblue"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
+
+                        <com.poshwash.driver.views.customViews.CustomTextViewBold
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/paid_amount"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_15sdp"
+                            android:visibility="visible" />
+
+                        <com.poshwash.driver.views.customViews.CustomTextViewBold
+                            android:id="@+id/paid_amount"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="end"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_15sdp"
+                            android:visibility="visible"
+                            tools:text="" />
+
+                    </LinearLayout>
+
+                </com.balysv.materialripple.MaterialRippleLayout>
+
+            </RelativeLayout>
+        </androidx.core.widget.NestedScrollView>
+    </RelativeLayout>
+</layout>

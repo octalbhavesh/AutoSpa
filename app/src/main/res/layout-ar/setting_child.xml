@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/parent_rl"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layoutDirection="rtl"
+    android:orientation="vertical"
+    android:padding="@dimen/_10sdp"
+    android:textDirection="rtl">
+
+    <com.poshwash.driver.views.customViews.CustomTextViewRegular
+        android:id="@+id/txt_settingname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/iv_arrow"
+        android:text="Manage profile"
+        android:textSize="@dimen/_13sdp" />
+
+    <ImageView
+        android:id="@+id/iv_arrow"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignParentEnd="true"
+        android:rotation="180"
+        android:src="@drawable/arrowgrey" />
+
+
+</RelativeLayout>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layoutDirection="rtl"
+        android:orientation="vertical"
+        android:textDirection="rtl">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/action_bar"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:background="@color/white">
+
+                <ImageView
+                    android:id="@+id/toggle_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="?actionBarSize"
+                    android:layout_marginStart="20dp"
+                    android:src="@drawable/menu"
+                    android:tint="@color/colorskyblue" />
+
+                <com.poshwash.driver.views.customViews.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="20dp"
+                    android:text="@string/my_booking"
+                    android:textColor="@color/graycolor"
+                    android:textSize="@dimen/_15sdp" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:gravity="start">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/userImage"
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="@dimen/_60sdp"
+                android:layout_alignParentStart="true" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:layout_toEndOf="@+id/userImage"
+                android:orientation="vertical">
+
+                <com.poshwash.driver.views.customViews.CustomTextViewRegular
+                    android:id="@+id/userNameTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/_15sdp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <me.zhanghai.android.materialratingbar.MaterialRatingBar
+                        android:id="@+id/rating_bar"
+                        style="@style/Widget.MaterialRatingBar.RatingBar"
+                        android:layout_width="@dimen/_80sdp"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:isIndicator="true"
+                        android:maxHeight="48dp"
+                        android:minHeight="20dp"
+                        android:numStars="5"
+                        app:mrb_progressTint="@color/ratingbar" />
+
+                    <com.poshwash.driver.views.customViews.CustomTextViewRegular
+                        android:id="@+id/userRatingTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:gravity="start"
+                        android:textColor="@color/graycolor"
+                        android:textSize="@dimen/_13sdp" />
+
+
+                </LinearLayout>
+
+
+                <com.poshwash.driver.views.customViews.CustomTextViewRegular
+                    android:id="@+id/userBonusTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:gravity="start"
+                    android:textColor="@color/graycolor"
+                    android:textSize="@dimen/_11sdp" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout"
+            style="@style/MyTabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/tab_background_color"
+            app:tabIndicatorColor="@color/colorPrimary"
+            app:tabIndicatorHeight="@dimen/_4sdp" />
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    </LinearLayout>
+</layout>

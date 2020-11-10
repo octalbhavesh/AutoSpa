@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:layoutDirection="rtl"
+        android:orientation="vertical"
+        android:textDirection="rtl">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/action_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:background="@color/white">
+
+                <ImageView
+                    android:id="@+id/toggle_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="?actionBarSize"
+                    android:layout_marginStart="20dp"
+                    android:src="@drawable/menu"
+                    android:tint="@color/colorskyblue" />
+
+                <com.poshwash.driver.views.customViews.CustomTextViewBold
+                    android:id="@+id/action_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="20dp"
+                    android:text="@string/my_transaction_history"
+                    android:textColor="@color/colorskyblue"
+                    android:textSize="@dimen/_15sdp" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp" />
+
+        </androidx.cardview.widget.CardView>
+
+        <include
+            android:id="@+id/shimmerFrameLayout"
+            layout="@layout/my_transaction_history_shimmer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/action_bar" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/action_bar" />
+
+
+        <com.poshwash.driver.views.customViews.CustomTextViewRegular
+            android:id="@+id/no_data_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/no_transaction_found"
+            android:textColor="@color/graycolor"
+            android:textSize="@dimen/_15sdp"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+</layout>

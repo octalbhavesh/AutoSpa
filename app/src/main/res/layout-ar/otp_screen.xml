@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:layoutDirection="rtl"
+    android:textDirection="rtl">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical"
+        android:weightSum="2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.2"
+            android:gravity="bottom"
+            android:orientation="vertical"
+            android:padding="@dimen/_20sdp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_app_logo" />
+
+
+            <com.poshwash.driver.views.customViews.CustomTextViewBold
+                android:id="@+id/otp_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_25sdp"
+                android:gravity="center"
+                android:text="@string/otp_verification"
+                android:textColor="@android:color/background_dark"
+                android:textSize="@dimen/connect_sign_up"
+                android:textStyle="bold" />
+
+            <com.poshwash.driver.views.customViews.CustomTextViewRegular
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:gravity="center"
+                android:paddingLeft="@dimen/_10sdp"
+                android:paddingRight="@dimen/_10sdp"
+                android:text="@string/otp_text"
+                android:textColor="@android:color/background_dark"
+                android:textSize="@dimen/_13sdp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.8"
+            android:background="#26FFFFFF"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_60sdp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_layout_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:paddingTop="@dimen/_1sdp"
+                    android:paddingRight="@dimen/_10sdp"
+                    android:paddingBottom="@dimen/_5sdp"
+                    android:textColorHint="@color/lightdarkgraycolor"
+                    app:hintEnabled="true"
+                    app:theme="@style/TextLabel">
+
+                    <com.poshwash.driver.views.customViews.CustomEditTextFont
+                        android:id="@+id/edt_otp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:hint="@string/enter_otp"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"
+                        android:maxLines="1"
+                        android:paddingTop="@dimen/_5sdp"
+                        android:textColor="@color/white" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_gravity="bottom|end"
+                    android:background="#545454"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.balysv.materialripple.MaterialRippleLayout
+                    android:id="@+id/ripple"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:mrl_rippleAlpha="0.1"
+                    app:mrl_rippleBackground="#FFFFFF"
+                    app:mrl_rippleColor="@color/white"
+                    app:mrl_rippleDelayClick="true"
+                    app:mrl_rippleDimension="10dp"
+                    app:mrl_rippleDuration="350"
+                    app:mrl_rippleHover="true"
+                    app:mrl_rippleOverlay="true"
+                    app:mrl_ripplePersistent="false">
+
+
+                    <com.poshwash.driver.views.customViews.CustomButtonBold
+                        android:id="@+id/btn_submit"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_50sdp"
+                        android:background="@color/sign_up_btn"
+                        android:padding="@dimen/_10sdp"
+                        android:text="@string/submit"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_15sdp"
+                        android:textStyle="bold" />
+
+                </com.balysv.materialripple.MaterialRippleLayout>
+
+                <com.balysv.materialripple.MaterialRippleLayout
+                    android:id="@+id/ripple1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_30sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    app:mrl_rippleAlpha="0.1"
+                    app:mrl_rippleColor="@color/white"
+                    app:mrl_rippleDelayClick="true"
+                    app:mrl_rippleDimension="10dp"
+                    app:mrl_rippleDuration="350"
+                    app:mrl_rippleHover="true"
+                    app:mrl_rippleOverlay="true"
+                    app:mrl_ripplePersistent="false">
+
+                    <com.poshwash.driver.views.customViews.CustomTextViewRegular
+                        android:id="@+id/regenrate_otp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/resend_otp"
+                        android:textColor="@android:color/background_dark" />
+
+                </com.balysv.materialripple.MaterialRippleLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

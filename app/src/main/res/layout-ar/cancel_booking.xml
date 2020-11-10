@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:layoutDirection="rtl"
+    android:orientation="vertical"
+    android:textDirection="rtl">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/toggle_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="?actionBarSize"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:src="@drawable/cross"
+            android:tint="@color/skybluecolor" />
+
+        <com.poshwash.driver.views.customViews.CustomTextViewBold
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="20dp"
+            android:text="@string/cancel"
+            android:textColor="@color/colorskyblue"
+            android:textSize="@dimen/_15sdp" />
+    </RelativeLayout>
+
+
+    <com.poshwash.driver.views.customViews.CustomTextViewBold
+        android:id="@+id/heading_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/signup_btn"
+        android:padding="@dimen/_12sdp"
+        android:text="@string/cancel_booking"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_15sdp"
+        android:textStyle="bold" />
+
+
+    <com.poshwash.driver.views.customViews.CustomEditTextFont
+        android:id="@+id/edt_cancelitem"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_100sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:background="@drawable/squareedittext"
+        android:gravity="top"
+        android:hint="@string/why_you_want_cancel_booking"
+        android:paddingStart="@dimen/_10sdp"
+        android:paddingTop="@dimen/_10sdp"
+        tools:ignore="RtlSymmetry" />
+
+
+    <com.balysv.materialripple.MaterialRippleLayout
+        android:id="@+id/ripple"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_25sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_25sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:gravity="center"
+        app:mrl_rippleAlpha="0.1"
+        app:mrl_rippleColor="@color/white"
+        app:mrl_rippleDelayClick="true"
+        app:mrl_rippleDimension="10dp"
+        app:mrl_rippleDuration="350"
+        app:mrl_rippleHover="true"
+        app:mrl_rippleOverlay="true"
+        app:mrl_ripplePersistent="false"
+        app:mrl_rippleRoundedCorners="@dimen/_30sdp">
+
+
+        <com.poshwash.driver.views.customViews.CustomButtonBold
+            android:id="@+id/btn_submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/mybuttonsubmit"
+            android:text="@string/submit"
+            android:textColor="@color/white" />
+
+    </com.balysv.materialripple.MaterialRippleLayout>
+
+</LinearLayout>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/dialog_border_logout"
+            android:orientation="vertical"
+            android:paddingTop="5dp">
+
+            <com.poshwash.driver.views.customViews.CustomTextViewBold
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="@string/app_name"
+                android:textColor="@color/skybluecolor"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:typeface="sans" />
+
+            <com.poshwash.driver.views.customViews.CustomTextViewRegular
+                android:id="@+id/dialog_twoaction_descss"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingBottom="15dp"
+                android:textColor="@color/colorskyblue"
+                android:textSize="15dp"
+                android:typeface="sans" />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorskyblue" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.poshwash.driver.views.customViews.CustomTextViewRegular
+                    android:id="@+id/dialog_yes"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Yes"
+                    android:textColor="@color/graycolor"
+                    android:textSize="16dp"
+                    android:typeface="normal" />
+
+                <View
+                    android:id="@+id/sap"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorskyblue" />
+
+                <com.poshwash.driver.views.customViews.CustomTextViewRegular
+                    android:id="@+id/dialog_no"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="No"
+                    android:textColor="@color/graycolor"
+                    android:textSize="16dp"
+                    android:typeface="normal" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</layout>

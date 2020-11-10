@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layoutDirection="rtl"
+    android:orientation="vertical"
+    android:textDirection="rtl">
+
+    <com.poshwash.driver.views.customViews.CustomTextViewRegular
+        android:id="@+id/promoCodeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="@string/promoCode"
+        android:textColor="@color/graycolor"
+        android:textSize="@dimen/_13sdp"
+        android:visibility="gone" />
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:background="@drawable/card_bg"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_10sdp">
+
+            <com.poshwash.driver.views.customViews.CustomTextViewRegular
+                android:id="@+id/promoCodeTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="25PERCENT" />
+
+            <com.poshwash.driver.views.customViews.CustomTextViewRegular
+                android:id="@+id/discount_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="25%" />
+
+            <com.poshwash.driver.views.customViews.CustomTextViewRegular
+                android:id="@+id/discountAmount_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_weight="0.5"
+                android:gravity="end"
+                android:text="25" />
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

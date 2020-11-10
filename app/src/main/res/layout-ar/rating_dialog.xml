@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/wash_complete_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/lightdarkgraycolor"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/skybluecolor"
+                android:gravity="center|start"
+                android:padding="10dp"
+                android:visibility="visible">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/user_pic_iv"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    app:civ_border_color="@color/graycolor"
+                    app:civ_border_width="1dp">
+
+                </de.hdodenhof.circleimageview.CircleImageView>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@+id/user_pic_iv"
+                    android:gravity="center|start"
+                    android:orientation="vertical">
+
+                    <com.poshwash.driver.views.customViews.CustomTextViewRegular
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center|start"
+                        android:text="@string/rate"
+                        android:textColor="@color/whitecolor"
+                        android:textSize="@dimen/textsize_16" />
+
+                    <com.poshwash.driver.views.customViews.CustomTextViewRegular
+                        android:id="@+id/review_text_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center|start"
+                        android:textColor="@color/whitecolor"
+                        android:textSize="@dimen/textsize_16" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+                <me.zhanghai.android.materialratingbar.MaterialRatingBar
+                    android:id="@+id/rating_bar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:isIndicator="false"
+                    android:numStars="5"
+                    android:rating="1"
+                    android:scaleX="0.8"
+                    android:scaleY="0.8"
+                    android:stepSize="1"
+                    android:theme="@style/RatingBarComplete" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/graycolor" />
+
+            <com.balysv.materialripple.MaterialRippleLayout
+                android:id="@+id/ripplealreay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="15dp"
+                app:mrl_rippleAlpha="0.1"
+                app:mrl_rippleColor="@color/white"
+                app:mrl_rippleDelayClick="true"
+                app:mrl_rippleDimension="10dp"
+                app:mrl_rippleDuration="350"
+                app:mrl_rippleHover="true"
+                app:mrl_rippleOverlay="true"
+                app:mrl_ripplePersistent="false"
+                app:mrl_rippleRoundedCorners="@dimen/_30sdp">
+
+                <TextView
+                    android:id="@+id/complete_rating_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/mybuttonsubmit"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="@string/complete_rating"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textsize_18"
+                    android:textStyle="bold"
+                    android:visibility="visible" />
+
+            </com.balysv.materialripple.MaterialRippleLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

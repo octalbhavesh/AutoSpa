@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">@color/skybluecolor</color>
+    <color name="colorPrimaryDark">@android:color/transparent</color>
+    <color name="colorAccent">@color/skybluecolor</color>
+    <color name="greencolor">#34a739</color>
+    <color name="graycolor">#2c2c2c</color>
+    <color name="lightdarkgraycolor">#2C2C2C</color>
+    <color name="whitecolor">#ffffff</color>
+    <color name="darkgraycolor">#919192</color>
+    <!--<color name="skybluecolor">#f0400f</color>-->
+    <color name="skybluecolor">#01B1EC</color>
+    <color name="place_autocomplete_search_hint">#919192</color>
+    <color name="lightgraycolor">#33333333</color>
+    <color name="blackcolor">#000000</color>
+    <color name="lightgreencolor">#d2e9b4</color>
+    <color name="notificationback">#eeeeee</color>
+
+    <color name="colorskyblue">#01B1EC</color>
+    <color name="colorgray">#F1F1F1</color>
+    <!-- Connect Screen  -->
+    <color name="white">#FFFFFF</color>
+    <color name="sign_up_btn">@color/skybluecolor</color>
+    <color name="signin_btn">@color/skybluecolor</color>
+    <color name="signup_btn">@color/skybluecolor</color>
+    <color name="onlineColor">#00ff00</color>
+    <color name="offlineColor">#e10404</color>
+    <color name="redcolor">#e10404</color>
+
+    <!-- add vehicle   -->
+    <color name="notificationtextcolor">#D6D6D6</color>
+    <color name="freewash">#A4A4A6</color>
+    <color name="texthintcolor">#bababa</color>
+    <color name="ratingbar">@color/skybluecolor</color>
+
+    <color name="spark_primary_color">@color/skybluecolor</color>
+
+    <color name="colorRipple">#A9A9F5</color>
+    <color name="fb_color">#3b589c</color>
+    <color name="theme_graycolor">#383838</color>
+    <color name="tab_background_color">#F5F5F5</color>
+
+    // status color
+    <color name="pending_color">#f1e60e</color>
+    <color name="accepted_color">#255bd3</color>
+    <color name="reached_color">#FFC107</color>
+    <color name="complete_color">@color/skybluecolor</color>
+    <color name="cancel_color">#8c0000</color>
+    <color name="started_color">#34a739</color>
+
+</resources>

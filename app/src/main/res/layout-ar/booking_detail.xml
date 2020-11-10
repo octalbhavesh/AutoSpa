@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:layoutDirection="rtl"
+        android:orientation="vertical"
+        android:textDirection="rtl">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/rr_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:background="@color/white">
+
+                <ImageView
+                    android:id="@+id/backIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="?actionBarSize"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:rotation="180"
+                    android:src="@drawable/back"
+                    android:tint="@color/colorskyblue" />
+
+                <com.poshwash.driver.views.customViews.CustomTextViewBold
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:text="@string/booking_detail"
+                    android:textColor="@color/graycolor"
+                    android:textSize="@dimen/_15sdp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <include
+            android:id="@+id/shimmerFrameLayout"
+            layout="@layout/booking_detail_shimmer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:orientation="vertical">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_150sdp"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/vehicleIv"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_80sdp"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/shedow_background"
+                        android:gravity="bottom"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/_5sdp"
+                        android:weightSum="2">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.5"
+                            android:orientation="vertical">
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_30sdp" />
+
+                            <com.poshwash.driver.views.customViews.CustomTextViewRegular
+                                android:id="@+id/vehicleNameTv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:textColor="@color/whitecolor"
+                                android:textSize="@dimen/_16sdp" />
+
+                            <com.poshwash.driver.views.customViews.CustomTextViewRegular
+                                android:id="@+id/vehicleNumberTv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_3sdp"
+                                android:background="@drawable/shedow_background"
+                                android:text=""
+                                android:textColor="@color/whitecolor"
+                                android:textSize="@dimen/_13sdp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/colorLl"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:gravity="end"
+                            android:orientation="horizontal">
+
+                            <com.poshwash.driver.views.customViews.CustomTextViewRegular
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/color"
+                                android:textColor="@color/whitecolor"
+                                android:textSize="@dimen/_16sdp"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=" :"
+                                android:textColor="@color/whitecolor"
+                                android:textSize="@dimen/_16sdp"
+                                android:visibility="gone" />
+
+                            <com.poshwash.driver.views.customViews.CustomTextViewRegular
+                                android:id="@+id/colorTv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:background="@drawable/shedow_background"
+                                android:text=""
+                                android:textColor="@color/whitecolor"
+                                android:textSize="@dimen/_13sdp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:padding="@dimen/_7sdp">
+
+                    <com.poshwash.driver.views.customViews.CustomTextViewRegular
+                        android:id="@+id/dateTimeTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/darkgraycolor"
+                        android:textSize="@dimen/_13sdp" />
+
+                    <com.poshwash.driver.views.customViews.CustomTextViewRegular
+                        android:id="@+id/statusTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:text=""
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/_13sdp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/_7sdp"
+                    android:paddingLeft="@dimen/_7sdp"
+                    android:paddingTop="@dimen/_1sdp"
+                    android:paddingEnd="@dimen/_7sdp"
+                    android:paddingRight="@dimen/_7sdp"
+                    android:paddingBottom="@dimen/_7sdp">
+
+                    <LinearLayout
+                        android:id="@+id/txnLl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <com.poshwash.driver.views.customViews.CustomTextViewRegular
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/txn_id"
+                            android:textColor="@color/darkgraycolor"
+                            android:textSize="@dimen/_13sdp" />
+
+                        <com.poshwash.driver.views.customViews.CustomTextViewRegular
+                            android:id="@+id/transactionIdTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            android:textColor="@color/darkgraycolor"
+                            android:textSize="@dimen/_13sdp" />
+
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:padding="@dimen/_7sdp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/userImageIv"
+                        android:layout_width="@dimen/_50sdp"
+                        android:layout_height="@dimen/_50sdp"
+                        android:layout_centerVertical="true" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_toStartOf="@+id/fareLL"
+                        android:layout_toEndOf="@+id/userImageIv"
+                        android:orientation="vertical">
+
+                        <com.poshwash.driver.views.customViews.CustomTextViewRegular
+                            android:id="@+id/userNameTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="@color/graycolor"
+                            android:textSize="@dimen/_14sdp" />
+
+                        <com.poshwash.driver.views.customViews.CustomTextViewRegular
+                            android:id="@+id/mobileNumberTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_3sdp"
+                            android:text=""
+                            android:textColor="@color/graycolor"
+                            android:textSize="@dimen/_14sdp" />
+
+                        <RatingBar
+                            android:id="@+id/userRatingBar"
+                            style="?attr/ratingBarStyleSmall"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:numStars="5"
+                            android:progressBackgroundTint="#333333"
+                            android:progressTint="@color/reached_color"
+                            android:stepSize="1" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/fareLL"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:gravity="end"
+                        android:orientation="vertical">
+
+                        <com.poshwash.driver.views.customViews.CustomTextViewBold
+                            android:id="@+id/amountTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="@color/graycolor"
+                            android:textSize="@dimen/_17sdp" />
+
+                        <com.poshwash.driver.views.customViews.CustomTextViewRegular
+                            android:id="@+id/getFareTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/get_fare"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/_15sdp" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/jobDurationLl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <com.poshwash.driver.views.customViews.CustomTextViewRegular
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/job_duration"
+                        android:textColor="@color/graycolor"
+                        android:textSize="@dimen/_15sdp" />
+
+                    <com.poshwash.driver.views.customViews.CustomTextViewRegular
+                        android:id="@+id/jobDurationTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:textColor="@color/graycolor"
+                        android:textSize="@dimen/_15sdp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:gravity="center|start"
+                    android:orientation="horizontal">
+
+                    <com.poshwash.driver.views.customViews.CustomTextViewRegular
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:text="@string/payment_method"
+                        android:textColor="@color/graycolor"
+                        android:textSize="@dimen/_15sdp" />
+
+                    <com.poshwash.driver.views.customViews.CustomTextViewRegular
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=":"
+                        android:textColor="@color/graycolor"
+                        android:textSize="@dimen/_15sdp" />
+
+                    <com.poshwash.driver.views.customViews.CustomTextViewRegular
+                        android:id="@+id/paymentModeTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:text=""
+                        android:textColor="@color/graycolor"
+                        android:textSize="@dimen/_12sdp" />
+                </LinearLayout>
+
+                <com.poshwash.driver.views.customViews.CustomTextViewRegular
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:text="@string/location"
+                    android:textColor="@color/graycolor"
+                    android:textSize="@dimen/_15sdp" />
+
+                <com.poshwash.driver.views.customViews.CustomTextViewRegular
+                    android:id="@+id/locationTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:text=""
+                    android:textColor="@color/graycolor"
+                    android:textSize="@dimen/_12sdp" />
+
+                <LinearLayout
+                    android:id="@+id/cancelLl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <com.poshwash.driver.views.customViews.CustomTextViewRegular
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/cancellationdatetime"
+                            android:textColor="@color/graycolor"
+                            android:textSize="@dimen/_15sdp" />
+
+                        <com.poshwash.driver.views.customViews.CustomTextViewRegular
+                            android:id="@+id/cancelTimeTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="@color/graycolor"
+                            android:textSize="@dimen/_13sdp" />
+
+                    </LinearLayout>
+
+                    <com.poshwash.driver.views.customViews.CustomTextViewRegular
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/cancel_reason"
+                        android:textColor="@color/graycolor"
+                        android:textSize="@dimen/_15sdp" />
+
+                    <com.poshwash.driver.views.customViews.CustomTextViewRegular
+                        android:id="@+id/reasonTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/graycolor"
+                        android:textSize="@dimen/_13sdp" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <com.poshwash.driver.views.customViews.CustomTextViewRegular
+            android:id="@+id/no_data_tv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/no_data_found"
+            android:textColor="@color/graycolor"
+            android:textSize="@dimen/_15sdp"
+            android:visibility="gone" />
+    </LinearLayout>
+</layout>

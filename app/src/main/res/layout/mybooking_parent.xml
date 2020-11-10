@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.poshwash.driver.views.customViews.CustomTextViewBold
+            android:id="@+id/txt_bookinggtype"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/signup_btn"
+            android:padding="@dimen/_12sdp"
+            android:text="@string/ondemanbooking"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_13sdp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+    </LinearLayout>
+</layout>

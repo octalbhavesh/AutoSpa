@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layoutDirection="rtl"
+        android:textDirection="rtl">
+
+        <RelativeLayout
+            android:id="@+id/actionbar"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:layout_alignParentTop="true"
+            android:background="@color/whitecolor">
+
+            <ImageView
+                android:id="@+id/toggle_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="?actionBarSize"
+                android:layout_marginStart="20dp"
+                android:src="@drawable/menu"
+                android:tint="@color/colorskyblue" />
+
+            <ImageView
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="20dp"
+                android:src="@drawable/ic_app_logo" />
+
+        </RelativeLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/bottom_layout"
+            android:layout_below="@+id/actionbar">
+
+            <fragment
+                android:id="@+id/map"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </FrameLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/bottom_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/lightdarkgraycolor"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <LinearLayout
+                        android:id="@+id/user_info_ll"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_toEndOf="@+id/customerPicIv"
+                        android:orientation="vertical">
+
+                        <com.poshwash.driver.views.customViews.CustomTextViewBold
+                            android:id="@+id/customerNameTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:text=""
+                            android:textColor="@color/whitecolor"
+                            android:textSize="@dimen/textsize_16"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center|start"
+                            android:orientation="horizontal"
+                            android:visibility="gone">
+
+                            <me.zhanghai.android.materialratingbar.MaterialRatingBar
+                                android:id="@+id/customerRatingBar"
+                                style="@style/Widget.MaterialRatingBar.RatingBar"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:max="5"
+                                android:maxHeight="48dp"
+                                android:minHeight="20dp"
+                                android:rating="3"
+                                app:mrb_progressTint="@color/white"
+                                app:mrb_secondaryProgressTint="@color/white" />
+
+                            <com.poshwash.driver.views.customViews.CustomTextViewRegular
+                                android:id="@+id/customerRatingTv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:text="3/5"
+                                android:textColor="@color/whitecolor"
+                                android:textSize="@dimen/textsize_14" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/customerPicIv"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        app:civ_border_color="@color/graycolor"
+                        app:civ_border_width="1dp">
+
+                    </de.hdodenhof.circleimageview.CircleImageView>
+
+                    <LinearLayout
+                        android:id="@+id/time_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerInParent="true"
+                        android:layout_toEndOf="@+id/user_info_ll"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+
+                        <LinearLayout
+                            android:id="@+id/ll_time"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical"
+                            android:visibility="visible">
+
+                            <com.poshwash.driver.views.customViews.CustomTextViewRegular
+                                android:id="@+id/time_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/whitecolor"
+                                android:textSize="@dimen/textsize_14" />
+
+                            <com.poshwash.driver.views.customViews.CustomTextViewRegular
+                                android:id="@+id/time_type_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:text=""
+                                android:textColor="@color/whitecolor"
+                                android:textSize="@dimen/textsize_14"
+                                android:visibility="gone" />
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <RatingBar
+                                    android:id="@+id/rating_bar"
+                                    style="?attr/ratingBarStyleSmall"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:numStars="5"
+                                    android:progressBackgroundTint="@color/white"
+                                    android:progressTint="@color/colorPrimary"
+                                    android:stepSize="1" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/darkgraycolor" />
+
+                <com.poshwash.driver.views.customViews.CustomTextViewBold
+                    android:id="@+id/view_detail_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/lightdarkgraycolor"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/_10sdp"
+                    android:paddingBottom="@dimen/_10sdp"
+                    android:text="@string/view_detail"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textsize_16"
+                    android:visibility="visible" />
+
+                <com.poshwash.driver.views.customViews.CustomTextViewBold
+                    android:id="@+id/reachedButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorskyblue"
+                    android:gravity="center"
+                    android:padding="15dp"
+                    android:text="@string/reached"
+                    android:textColor="@color/click_selector"
+                    android:textSize="@dimen/textsize_18"
+                    android:textStyle="bold"
+                    android:visibility="visible" />
+
+                <com.poshwash.driver.views.customViews.CustomTextViewBold
+                    android:id="@+id/start_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorskyblue"
+                    android:drawableEnd="@drawable/ic_right"
+                    android:gravity="center"
+                    android:padding="15dp"
+                    android:text="@string/start_wipe"
+                    android:textColor="@color/click_selector"
+                    android:textSize="@dimen/textsize_18"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+                <com.poshwash.driver.views.customViews.CustomTextViewBold
+                    android:id="@+id/complete_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorskyblue"
+                    android:drawableStart="@drawable/ic_left"
+                    android:gravity="center"
+                    android:padding="15dp"
+                    android:text="@string/complete_wipe"
+                    android:textColor="@color/click_selector"
+                    android:textSize="@dimen/textsize_18"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+
+            </LinearLayout>
+        </RelativeLayout>
+
+    </RelativeLayout>
+</layout>

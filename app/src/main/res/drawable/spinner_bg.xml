@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item>
+
+        <layer-list>
+
+            <item>
+                <shape android:shape="rectangle">
+                    <corners android:radius="@dimen/_30sdp" />
+                    <stroke android:width="1dip" android:color="@color/notificationtextcolor" />
+                    <solid android:color="@android:color/transparent" />
+                    <padding android:right="5dp" />
+                </shape>
+
+            </item>
+
+            <item>
+                <bitmap android:gravity="center_vertical|right" android:src="@drawable/dropdown" />
+
+
+            </item>
+
+        </layer-list>
+
+    </item>
+
+</selector>
